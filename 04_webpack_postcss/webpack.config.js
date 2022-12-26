@@ -5,19 +5,20 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,
-				// 1.
-				// loader: 'css-loader'
-
-				// 2.
 				use: [
 					'style-loader',
-					'css-loader'
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [
+									require('autoprefixer')
+								]
+							}
+						}
+					}
 				]
-
-				// 3.
-				// use: [
-				// 	{ loader: 'css-loader', /** other options */}
-				// ]
 			},
 			{
 				test: /\.scss$/,

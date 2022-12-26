@@ -8,3 +8,9 @@ pnpm install -D autoprefixer
 npx postcss --use autoprefixer -o demo.css src/css/style.css
 ```
 
+## Using `postcss-loader`
+
+```bash
+pnpm install -D postcss-loader
+
+```
