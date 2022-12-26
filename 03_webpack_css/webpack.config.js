@@ -9,14 +9,15 @@ module.exports = {
 				// loader: 'css-loader'
 
 				// 2.
-				// use: [
-				// 	'css-loader'
-				// ]
+				use: [
+					'style-loader',
+					'css-loader'
+				]
 
 				// 3.
-				use: [
-					{ loader: 'css-loader', /** other options */}
-				]
+				// use: [
+				// 	{ loader: 'css-loader', /** other options */}
+				// ]
 			}
 		]
 	}
