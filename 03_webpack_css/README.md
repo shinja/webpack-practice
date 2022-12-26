@@ -10,3 +10,16 @@
 		'css-loader' // first
 	]
 ```
+
+## Process `.scss` Files.
+
+### Install `sass` and `sass-loader`
+```bash
+pnpm install -D sass sass-loader
+```
+
+### Running via command
+```bash
+npx sass src/css/style.scss > output.scss
+
+```
