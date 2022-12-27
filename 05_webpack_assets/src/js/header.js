@@ -1,5 +1,6 @@
 
 console.log('header.js bundled.');
+import '../css/font.css'
 import '../css/style.css'
 import '../css/style.scss'
 

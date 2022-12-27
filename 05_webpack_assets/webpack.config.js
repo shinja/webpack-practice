@@ -8,7 +8,7 @@ module.exports = {
 		 * if we specific the output option in file-loader/url-loader
 		 *
 		 **/
-		assetModuleFilename: 'img/[name].[hash:8][ext][query]'
+		// assetModuleFilename: 'img/[name].[hash:8][ext][query]'
 	},
 	module: {
 		rules: [
@@ -53,6 +53,30 @@ module.exports = {
 				// 	name: '[name].[contenthash:8].[ext][query]',
 				//  	limit: 20 * 1024 // doing base64 if LESS than limit.
 				// },
+			},
+
+			{
+				test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+				/**
+				 * in webpack 5, we don't need do this again.
+				 */
+				// use: [
+				//   {
+				// 	loader: 'file-loader',
+				// 	options: {
+				// 	  outputPath: 'fonts/',
+				// 	  name: '[name].[ext]',
+				// 	}
+				//   }
+				// ],
+
+				/**
+				 * webpack 5 usage.
+				 */
+				type: 'asset/resource',
+				generator: {
+					filename: 'fonts/[name].[hash:8][ext][query]'
+				}
 			}
 		]
 	}
