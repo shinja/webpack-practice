@@ -12,3 +12,13 @@ npx babel src/js/es6.js --out-dir ./build --plugins=@babel/plugin-transform-arro
 
 ```
 
+# Using Presets
+
+```bash
+pnpm un @babel/plugin-transform-arrow-functions @babel/plugin-transform-block-scoping
+
+pnpm i -D @babel/preset-env
+
+npx babel src/js/es6.js --out-dir ./build --presets=@babel/preset-env
+
+```
