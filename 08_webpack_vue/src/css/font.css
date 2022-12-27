@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'xyz';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Sevillana-Regular.ttf') format('truetype');
+}
+
+body {
+	font-family: 'xyz';
+}
