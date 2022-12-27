@@ -14,7 +14,7 @@ console.log(sum(2, 30));
 console.log(priceFormat());
 
 const app = createApp({
-	template: `<h2>{{ message }}</h2>`,
+	template: '#my-app',
 	data() {
 		return {
 			message: 'Hello Vue!',
