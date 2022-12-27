@@ -2,6 +2,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
 	entry: "./src/index.js",
@@ -87,6 +88,10 @@ module.exports = {
 			{
 				test: /\.js$/i,
 				loader: 'babel-loader',
+			},
+			{
+				test: /\.vue$/i,
+				loader: 'vue-loader',
 			}
 		]
 	},
@@ -100,6 +105,8 @@ module.exports = {
 		new webpack.DefinePlugin({
 			__VUE_OPTIONS_API__: true,
 			__VUE_PROD_DEVTOOLS__: false,
-		})
+		}),
+
+		new VueLoaderPlugin()
 	]
 }
