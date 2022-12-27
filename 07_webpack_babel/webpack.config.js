@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
 	entry: "./src/index.js",
 	mode: 'development',
-	devtool: 'source-map',
 	output: {
 		// TODO: temp for clean webpack plugin and webpack 5
 		path: path.resolve(__dirname, 'dist'),
@@ -83,6 +82,10 @@ module.exports = {
 				generator: {
 					filename: 'fonts/[name].[hash:8][ext][query]'
 				}
+			},
+			{
+				test: /\.js$/i,
+				loader: 'babel-loader',
 			}
 		]
 	},

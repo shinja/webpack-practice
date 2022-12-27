@@ -22,3 +22,13 @@ pnpm i -D @babel/preset-env
 npx babel src/js/es6.js --out-dir ./build --presets=@babel/preset-env
 
 ```
+
+
+# Using `babel-loader`
+
+```bash
+pnpm i -D babel-loader @babel/core
+
+npm run build
+
+```
