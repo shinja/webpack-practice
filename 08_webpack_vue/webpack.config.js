@@ -1,5 +1,6 @@
 
 const path = require('path')
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
@@ -92,6 +93,13 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin({
 			verbose: true,
+		}),
+		/**
+		 * Fixed some Vue warning.
+		 */
+		new webpack.DefinePlugin({
+			__VUE_OPTIONS_API__: true,
+			__VUE_PROD_DEVTOOLS__: false,
 		})
 	]
 }
